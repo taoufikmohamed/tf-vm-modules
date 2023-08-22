@@ -40,6 +40,12 @@ variable "sub" {
   default     = ""
   description = "subnet"
 }
+
+variable "subnet_id" {
+  type        = string
+  default     = ""
+  description = "subnet ID"
+}
 variable "vnet" {
   type        = string
   default     = ""

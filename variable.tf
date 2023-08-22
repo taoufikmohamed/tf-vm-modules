@@ -28,16 +28,7 @@ variable "admin_password" {
   default     = ""
   description = "Password for Azure Virtual Machine"
 }
-variable "sub" {
-  type        = string
-  default     = ""
-  description = "subnet"
-}
-variable "vnet" {
-  type        = string
-  default     = ""
-  description = "vnet"
-}
+
 variable "size" {
   type        = string
   default     = ""
@@ -52,4 +43,24 @@ variable "ic" {
   type        = string
   default     = ""
   description = "ipconfig"
+}
+variable "sub" {
+  type        = string
+  default     = ""
+  description = "subnet"
+}
+variable "vnet" {
+  type        = string
+  default     = ""
+  description = "vnet"
+}
+variable "address_prefixes" {
+  type        = string
+  default     = ""
+  description = ""
+}
+variable "address_space" {
+  type        = string
+  default     = ""
+  description = ""
 }

@@ -17,13 +17,28 @@ resource "azurerm_resource_group" "rg" {
   location = var.location
 
 }
-module "winvm" {
-  source   = "./modules/vm/"
+module "vnetwork" {
+  source   = "./modules/vnet/"
   rg_Name  = var.rg_Name
   location = var.location
-  vm_name  = var.vm_name
-  size     = var.size
+  vnet     = var.vnet
   sub      = var.sub
+
+
+  #address_space    = var.addspace
+  #sub              = var.sub
+  #address_prefixes = var.address_prfixes
+  #nicc             = var.nicc
+  #ic             = var.ic
+
+}
+module "winvm" {
+  source         = "./modules/vm/"
+  rg_Name        = var.rg_Name
+  location       = var.location
+  vm_name        = var.vm_name
+  size           = var.size
+  nicc           = var.nicc
   ic             = var.ic
   vnet           = var.vnet
   admin_username = var.admin_username
