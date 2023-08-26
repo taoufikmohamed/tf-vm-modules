@@ -25,12 +25,6 @@ module "vnetwork" {
   sub      = var.sub
 
 
-  #address_space    = var.addspace
-  #sub              = var.sub
-  #address_prefixes = var.address_prfixes
-  #nicc             = var.nicc
-  #ic             = var.ic
-
 }
 module "winvm" {
   source         = "./modules/vm/"
