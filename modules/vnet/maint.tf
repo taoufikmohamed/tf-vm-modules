@@ -15,4 +15,3 @@ resource "azurerm_subnet" "sub" {
 //    output "subnet_id" {
  // value = azurerm_subnet.sub.id
 //}
-//subnet_id= azurerm_subnet.sub.id
